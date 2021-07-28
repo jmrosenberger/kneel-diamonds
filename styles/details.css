@@ -1,5 +1,20 @@
 /* You need to create the rest of styles for the layout shown */
 
+
+
+/* -- added in to format correctly -- jmr-*/
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* ------------------------------------- */
+
+
+
+
 .options {
     flex-basis: 24%;
     margin: 0 2rem;
@@ -8,4 +23,5 @@
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
+
 

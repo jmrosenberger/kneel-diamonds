@@ -1,4 +1,4 @@
-import { getOrders } from "./database.js"
+import { getCustomOrders } from "./database.js"
 
 const buildOrderListItem = (order) => {
     return `<li>
@@ -11,13 +11,13 @@ export const Orders = () => {
         Can you explain why the state variable has to be inside
         the component function for Orders, but not the others?
     */
-    const orders = getOrders()
+    const orders = getCustomOrders()
 
     let html = "<ul>"
 
-    const listItems = orders.map(buildOrderListItem)
+    const listItemsArray = orders.map(buildOrderListItem)
 
-    html += listItems.join("")
+    html += listItemsArray.join(" ")
     html += "</ul>"
 
     return html
