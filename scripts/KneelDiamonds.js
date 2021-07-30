@@ -3,6 +3,7 @@ import { DiamondSizes } from "./DiamondSizes.js"
 import { JewelryStyles } from "./JewelryStyles.js"
 import { Orders } from "./Orders.js"
 import { Metals } from "./Metals.js"
+import { JewelryTypes } from "./JewelryTypes.js"
 import { addCustomOrder } from "./database.js"
 
 
@@ -36,6 +37,11 @@ export const KneelDiamonds = () => {
         </article>
 
         <article>
+            <div class="types">
+                <section class="jewelryType">
+                    ${JewelryTypes()}
+                </section>
+            </div>
             <button id="orderButton">Create Custom Order</button>
         </article>
 
