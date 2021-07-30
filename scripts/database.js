@@ -29,9 +29,9 @@ const database = {
         { id: 5, metal: "Palladium", price: 1241.0 }
     ],
     types: [
-        {id: 1, type: "Ring"},
-        {id: 2, type: "Earrings"}, 
-        {id: 3, type: "Necklace"}
+        {id: 1, type: "Ring", price: 1},
+        {id: 2, type: "Earrings", price: 2}, 
+        {id: 3, type: "Necklace", price: 4}
     ],
     customOrders: [
         {
