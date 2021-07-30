@@ -1,4 +1,4 @@
-import { getCustomOrders, getMetals, getSizes, getStyles } from "./database.js"
+import { getCustomOrders, getMetals, getSizes, getStyles, getTypes } from "./database.js"
 
 
 const metals = getMetals()
@@ -26,8 +26,19 @@ const buildOrderListItem = (order) => {
             return style.id === order.styleId
         }
     )
+
+    const findType = types.find(
+        (type) => {
+            return type.id === order.TypeId
+        }
+    )
     
     const totalCost = findMetal.price + findSize.price + findStyle.price
+
+    // const totalAdjustedCost = (totalCost, type.id) => {
+    //     if ()
+    // }
+
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",
         currency: "USD"
