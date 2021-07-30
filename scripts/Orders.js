@@ -4,7 +4,7 @@ import { getCustomOrders, getMetals, getSizes, getStyles, getTypes } from "./dat
 const metals = getMetals()
 const sizes = getSizes()
 const styles = getStyles()
-
+const types = getTypes()
 
 
 const buildOrderListItem = (order) => {
@@ -29,16 +29,14 @@ const buildOrderListItem = (order) => {
 
     const findType = types.find(
         (type) => {
-            return type.id === order.TypeId
+            return type.id === order.typeId
         }
     )
     
-    const totalCost = findMetal.price + findSize.price + findStyle.price
 
-    // const totalAdjustedCost = (totalCost, type.id) => {
-    //     if ()
-    // }
-
+    
+    const totalCost = (findMetal.price + findSize.price + findStyle.price) * findType.price
+    
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",
         currency: "USD"
@@ -48,6 +46,8 @@ const buildOrderListItem = (order) => {
         Order #${order.id} cost ${costString}
     </li>`
 }
+
+
 
 export const Orders = () => {
     /*
