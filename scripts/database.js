@@ -44,6 +44,9 @@ const database = {
         }
     ]
 }
+export const getOrderBuilder = () => {
+    return database.orderBuilder
+}
 
 export const getMetals = () => {
     return database.metals.map(metal => ({...metal}))
