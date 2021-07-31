@@ -1,4 +1,4 @@
-import { getCustomOrders, getMetals, getSizes, getStyles, getTypes } from "./database.js"
+import { getCustomOrders, getMetals, getSizes, getStyles, getTypes } from "./dataAccess.js"
 
 
 const metals = getMetals()

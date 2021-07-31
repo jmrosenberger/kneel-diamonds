@@ -1,4 +1,4 @@
-import { getStyles, setStyle, getOrderBuilder } from "./database.js"
+import { getStyles, setStyle, getOrderBuilder } from "./dataAccess.js"
 import { renderAllHTML } from "./main.js"
 
 const styles = getStyles()
